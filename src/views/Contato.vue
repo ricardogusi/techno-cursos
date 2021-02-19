@@ -1,11 +1,11 @@
 <template>
-  <div class="home">
+  <div>
     <div v-if="loading">
-      <PageLoading/>
+       <PageLoading/>
     </div>
     <div v-if="api">
-      <h1>Home</h1>
-      <p>{{ api }}</p>
+      <h1>contato</h1>
+      {{ api }}
     </div>
   </div>
 </template>
@@ -14,10 +14,12 @@
 import fetchData from "@/mixins/fetchData.js";
 
 export default {
-  name: "Home",
+  name: "contato",
   mixins: [fetchData],
   created() {
-    this.fetchData("/home");
+    this.fetchData("/contato");
   },
 };
 </script>
+
+<style></style>
